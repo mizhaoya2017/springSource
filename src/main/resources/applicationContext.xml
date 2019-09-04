@@ -2,10 +2,8 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="myTestBean" class="com.mzy.source.start.MyTestBean">
-        <meta key="testStr" value="aaaaaa"/>
+    <bean id="test" class="com.mzy.source.getBean.Test">
     </bean>
-    <bean id="car" class="com.mzy.source.getBean.CarFactoryBean">
-        <property name="carInfo" value="超级跑车,400,2000000"/>
+    <bean id="hello" class="com.mzy.source.getBean.Hello">
     </bean>
 </beans>

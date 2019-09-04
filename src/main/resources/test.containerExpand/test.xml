@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userManager" class="com.mzy.source.containerExpand.UserManager">
+        <property name="dataValue">
+            <value>2013-03-15</value>
+        </property>
+    </bean>
+    <!--<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">-->
+        <!--<property name="customEditors">-->
+            <!--<bean class="org.springframework.beans.factory.config.MapFactoryBean">-->
+                <!--<property name="targetMapClass">-->
+                    <!--<value>java.util.Map</value>-->
+                <!--</property>-->
+                <!--<property name="sourceMap">-->
+                    <!--<map>-->
+                        <!--<entry key="java.util.Date">-->
+                            <!--<bean class="com.mzy.source.containerExpand.DatePropertyEditor">-->
+                                <!--<property name="format" value="yyyy-MM-dd" />-->
+                            <!--</bean>-->
+                        <!--</entry>-->
+                    <!--</map>-->
+                <!--</property>-->
+            <!--</bean>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">-->
+        <!--<property name="customEditors">-->
+            <!--<map>-->
+                <!--<entry key="java.util.Date">-->
+                    <!--<bean class="com.mzy.source.containerExpand.DatePropertyEditor">-->
+                        <!--<property name="format" value="yyyy-MM-dd" />-->
+                    <!--</bean>-->
+                <!--</entry>-->
+            <!--</map>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="propertyEditorRegistrars">
+            <list>
+                <bean class="com.mzy.source.containerExpand.DatePropertyEditorRegistrar"></bean>
+            </list>
+        </property>
+    </bean>
+</beans>
