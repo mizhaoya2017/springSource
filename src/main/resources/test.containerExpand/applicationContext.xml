@@ -11,4 +11,11 @@
         </property>
     </bean>
     <bean id="testListener" class="com.mzy.source.containerExpand.TestListener" />
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="com.mzy.source.containerExpand.String2DateConverter" />
+            </list>
+        </property>
+    </bean>
 </beans>
