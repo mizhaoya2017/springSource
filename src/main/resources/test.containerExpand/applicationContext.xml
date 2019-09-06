@@ -10,4 +10,5 @@
             </list>
         </property>
     </bean>
+    <bean id="testListener" class="com.mzy.source.containerExpand.TestListener" />
 </beans>
