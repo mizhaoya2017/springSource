@@ -19,42 +19,42 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SuppressWarnings("deprecation")
 public class ApplicationTest {
 
-    @Test
-    public void test1() {
-        BeanFactory bf = new XmlBeanFactory(new ClassPathResource("beanFactoryTest.xml"));
-        MyTestBean bean = (MyTestBean)bf.getBean("myTestBean");
-        Car car = (Car)bf.getBean("car");
-        CarFactoryBean carFactoryBean = (CarFactoryBean)bf.getBean("&car");
-        System.out.println("bean");
-    }
-    @Test
-    public void test2() throws Throwable{
-        try {
-            new ClassPathXmlApplicationContext("test.CircleRely/test.xml");
-        } catch (Exception e) {
-            Throwable e1 = e.getCause().getCause().getCause();
-            throw e1;
-        }
-    }
-
-
-
-    @Test
-    public void test3() throws Throwable{
-        try {
-            ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("test.CircleRely/testPrototype.xml");
-            System.out.println(ctx.getBean("testA"));
-        } catch (Exception e) {
-            Throwable e1 = e.getCause().getCause().getCause();
-            throw e1;
-        }
-    }
-
-    @Test
-    public void test4() {
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("test.containerExpand/test.xml");
-        UserManager userManager = (UserManager) ctx.getBean("userManager");
-        System.out.println(userManager);
-    }
+//    @Test
+//    public void test1() {
+//        BeanFactory bf = new XmlBeanFactory(new ClassPathResource("beanFactoryTest.xml"));
+//        MyTestBean bean = (MyTestBean)bf.getBean("myTestBean");
+//        Car car = (Car)bf.getBean("car");
+//        CarFactoryBean carFactoryBean = (CarFactoryBean)bf.getBean("&car");
+//        System.out.println("bean");
+//    }
+//    @Test
+//    public void test2() throws Throwable{
+//        try {
+//            new ClassPathXmlApplicationContext("test.CircleRely/test.xml");
+//        } catch (Exception e) {
+//            Throwable e1 = e.getCause().getCause().getCause();
+//            throw e1;
+//        }
+//    }
+//
+//
+//
+//    @Test
+//    public void test3() throws Throwable{
+//        try {
+//            ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("test.CircleRely/testPrototype.xml");
+//            System.out.println(ctx.getBean("testA"));
+//        } catch (Exception e) {
+//            Throwable e1 = e.getCause().getCause().getCause();
+//            throw e1;
+//        }
+//    }
+//
+//    @Test
+//    public void test4() {
+//        ApplicationContext ctx = new ClassPathXmlApplicationContext("test.containerExpand/test.xml");
+//        UserManager userManager = (UserManager) ctx.getBean("userManager");
+//        System.out.println(userManager);
+//    }
 
 }
